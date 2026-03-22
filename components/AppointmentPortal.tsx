@@ -6,6 +6,7 @@ import { useState } from "react";
 
 export default function AppointmentPortal() {
     const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success">("idle");
+    const [selectedConcern, setSelectedConcern] = useState("");
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -148,20 +149,39 @@ export default function AppointmentPortal() {
                                     </div>
                                     <div>
                                         <label className="block text-sm font-bold text-slate-700 mb-2">Concern</label>
-                                        <select name="Concern" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-slate-700 bg-white appearance-none cursor-pointer">
+                                        <select 
+                                            name="Concern" 
+                                            required
+                                            value={selectedConcern}
+                                            onChange={(e) => setSelectedConcern(e.target.value)}
+                                            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-slate-700 bg-white appearance-none cursor-pointer"
+                                        >
                                             <option value="">Select Treatment</option>
-                                            <option>Fracture</option>
-                                            <option>Post Operative Follow-Up</option>
-                                            <option>Infection</option>
-                                            <option>Flat Foot</option>
-                                            <option>Diabetic Foot</option>
-                                            <option>Heel Pain</option>
-                                            <option>Sports Injury</option>
-                                            <option>Deformity</option>
-                                            <option>Other</option>
+                                            <option value="Fracture">Fracture</option>
+                                            <option value="Post Operative Follow-Up">Post Operative Follow-Up</option>
+                                            <option value="Infection">Infection</option>
+                                            <option value="Flat Foot">Flat Foot</option>
+                                            <option value="Diabetic Foot">Diabetic Foot</option>
+                                            <option value="Heel Pain">Heel Pain</option>
+                                            <option value="Sports Injury">Sports Injury</option>
+                                            <option value="Deformity">Deformity</option>
+                                            <option value="Other">Other</option>
                                         </select>
                                     </div>
                                 </div>
+                                
+                                {selectedConcern === "Other" && (
+                                    <div className="animate-in fade-in slide-in-from-top-2 duration-300">
+                                        <label className="block text-sm font-bold text-slate-700 mb-2">Please Specify</label>
+                                        <input
+                                            name="Other Concern Explanation"
+                                            required
+                                            type="text"
+                                            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all placeholder:text-slate-400"
+                                            placeholder="Briefly describe your concern"
+                                        />
+                                    </div>
+                                )}
                                 <div className="flex items-center gap-3 bg-slate-50 p-4 border border-slate-100 rounded-xl">
                                     <input type="checkbox" id="emergency" name="Emergency Consultation Needed" value="Yes" className="w-5 h-5 accent-red-500 rounded cursor-pointer" />
                                     <label htmlFor="emergency" className="text-sm font-bold text-slate-700 cursor-pointer">Emergency Consultation Needed</label>

@@ -15,12 +15,23 @@ export default function HeroSection() {
                     <div className="inline-block bg-primary/20 text-primary-foreground font-semibold px-4 py-1.5 rounded-full mb-6 border border-primary/30 backdrop-blur-sm animate-in fade-in slide-in-from-bottom-4 duration-700">
                         #1 Foot & Ankle Clinic in Mumbai
                     </div>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
-                        Restoring Mobility, <br />
-                        <span className="text-primary">Renewing Lives.</span>
-                    </h1>
-                    <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-xl leading-relaxed animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">
-                        Expert Foot and Ankle (Orthopedic) Surgeon specialized in Minimally Invasive Surgery, Ankle Replacement, and Sports Injuries. Trust your feet to Dr. Samarth Ajay Thakkar.
+                    
+                    <div className="mb-4 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-75">
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-3 leading-tight">
+                            Dr. Samarth Ajay Thakkar
+                        </h1>
+                        <div className="font-semibold tracking-wide max-w-3xl space-y-1">
+                            <p className="text-white text-lg md:text-2xl">MBBS, MS Ortho (Gold Medalist)</p>
+                            <p className="text-white text-lg md:text-2xl">Fellowships in Foot and Ankle Surgery (India & US)</p>
+                        </div>
+                    </div>
+
+                    <h2 className="text-2xl md:text-3xl font-medium text-primary mb-6 italic animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
+                        "Restoring Mobility, Renewing Lives."
+                    </h2>
+
+                    <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">
+                        Expert Foot and Ankle (Orthopedic) Surgeon specialized in Minimally Invasive Surgery, Ankle Replacement, and Sports Injuries. Trust your feet to a specialist dedicated to world-class care.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-16 duration-700 delay-300">
                         <Link
