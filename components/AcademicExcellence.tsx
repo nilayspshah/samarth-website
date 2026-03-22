@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
-import { Award, GraduationCap, Globe, CheckCircle2, Stethoscope } from "lucide-react";
+import { Award, GraduationCap, Globe, CheckCircle2, Stethoscope, FileText, ChevronDown, ChevronUp, BookOpen } from "lucide-react";
+import { useState } from "react";
 
 export default function AcademicExcellence() {
+    const [isExpanded, setIsExpanded] = useState(false);
+
     return (
         <section id="academic" className="py-20 bg-white">
             <div className="container mx-auto px-4 md:px-6">
@@ -47,7 +52,7 @@ export default function AcademicExcellence() {
                                 <div className="bg-primary/10 p-3 rounded-xl text-primary">
                                     <Stethoscope className="w-6 h-6" />
                                 </div>
-                                <h3 className="text-xl font-bold font-heading text-slate-900">Clinical Expertise</h3>
+                                <h3 className="text-xl font-bold font-heading text-slate-900">Clinical Experience and Fellowships (8+ Years)</h3>
                             </div>
                             <ul className="space-y-4">
                                 <li className="flex gap-3 items-start">
@@ -91,6 +96,103 @@ export default function AcademicExcellence() {
                                     </div>
                                 </li>
                             </ul>
+                        </div>
+
+                        <hr className="border-slate-100" />
+
+                        {/* 4. Key Awards & Highlights */}
+                        <div>
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className="bg-emerald-100 p-3 rounded-xl text-emerald-600">
+                                    <Award className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-xl font-bold font-heading text-slate-900">Key Awards & Highlights</h3>
+                            </div>
+                            <ul className="space-y-4">
+                                <li className="flex gap-3 items-start">
+                                    <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-1" />
+                                    <span className="text-slate-700"><strong>Prestigious Awards:</strong> Masalawala Best Paper Award (WIROC 2025) - Total talus replacement, and Best Case Presentation (GFAS 2026) - Peritalar dislocation with calcaneus fracture.</span>
+                                </li>
+                                <li className="flex gap-3 items-start">
+                                    <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-1" />
+                                    <span className="text-slate-700"><strong>Book Authorship:</strong> Author of the "Manual for Practical Exam Preparation" for undergraduate medical students.</span>
+                                </li>
+                                <li className="flex gap-3 items-start">
+                                    <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-1" />
+                                    <span className="text-slate-700"><strong>Specialized Observerships:</strong> Awarded the esteemed COS Observership in Hand Surgery at Ganga Hospital, Coimbatore (2023).</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <hr className="border-slate-100" />
+
+                        {/* 5. Research & Publications */}
+                        <div>
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className="bg-blue-100 p-3 rounded-xl text-blue-600">
+                                    <BookOpen className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-xl font-bold font-heading text-slate-900">Research & Publications</h3>
+                            </div>
+                            
+                            <ul className="space-y-4">
+                                <li className="flex gap-3 items-start">
+                                    <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0 mt-1" />
+                                    <span className="text-slate-700"><strong>Thakkar, S.</strong>, Rao, S., Hegde, A., Mane, P., Khanna, V., & Shetty, C. (2021). Comparison of scapular morphology in degenerative and traumatic rotator cuff tears. <em>Journal of Musculoskeletal Research</em>.</span>
+                                </li>
+                                <li className="flex gap-3 items-start">
+                                    <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0 mt-1" />
+                                    <span className="text-slate-700"><strong>Thakkar, S.</strong>, Hegde, A., Mane, P., Shetty, C., & Tripathi, A. (2023). A rare case of complete sequestration of the patella: An unusual presentation of patellar tuberculosis. <em>Infectious Diseases in Clinical Practice</em>.</span>
+                                </li>
+                                <li className="flex gap-3 items-start">
+                                    <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0 mt-1" />
+                                    <span className="text-slate-700">Hegde, A. S., Mane, P. P., Shetty, C. B., & <strong>Thakkar, S. A.</strong> (2021). "Screw First" Technique to Get Past Nail-Jig Mismatch in Proximal Femoral Nailing. <em>Indian Journal of Orthopaedics</em>.</span>
+                                </li>
+                            </ul>
+
+                            {isExpanded && (
+                                <ul className="space-y-4 mt-4 animate-in fade-in slide-in-from-top-4 duration-500">
+                                    <li className="flex gap-3 items-start">
+                                        <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0 mt-1" />
+                                        <span className="text-slate-700">Hegde, A. S., Shetty, C. B., Joseph, N., Mane, P., & <strong>Thakkar, S.</strong> (2023). Preoperative estimation of humerus intramedullary nail length using clinical landmarks. <em>Chinese Journal of Traumatology</em>.</span>
+                                    </li>
+                                    <li className="flex gap-3 items-start">
+                                        <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0 mt-1" />
+                                        <span className="text-slate-700">Hegde, A., Mane, P. P., Shetty, C. B., & <strong>Thakkar, S. A.</strong> (2022). Neurogenic heterotopic ossificans of hips in a case of expanded dengue syndrome... <em>BMJ Case Reports</em>.</span>
+                                    </li>
+                                    <li className="flex gap-3 items-start">
+                                        <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0 mt-1" />
+                                        <span className="text-slate-700">Goel, S., ... <strong>Thakkar, S.</strong>, et al. (2021). Cross-sectional assessment of cardiovascular risk factors in patients with knee osteoarthritis. <em>F1000Research</em>.</span>
+                                    </li>
+                                    <li className="flex gap-3 items-start">
+                                        <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0 mt-1" />
+                                        <span className="text-slate-700">Agrawal, S., ... <strong>Thakkar, S.</strong>, et al. (2023). Peroneus longus tendon autograft for primary arthroscopic reconstruction of the Anterior Cruciate Ligament. <em>Muscle Ligaments and Tendons Journal</em>.</span>
+                                    </li>
+                                </ul>
+                            )}
+
+                            <button 
+                                onClick={() => setIsExpanded(!isExpanded)} 
+                                className="mt-6 flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800 transition-colors"
+                            >
+                                {isExpanded ? (
+                                    <><ChevronUp className="w-4 h-4" /> Show Less</>
+                                ) : (
+                                    <><ChevronDown className="w-4 h-4" /> View All 7 Publications</>
+                                )}
+                            </button>
+                        </div>
+
+                        {/* CV Download Button */}
+                        <div className="mt-4 flex justify-center lg:justify-start">
+                            <a
+                                href="/media/CV Samarth_March 2026.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-white border-2 border-slate-200 hover:border-primary text-slate-700 hover:text-primary font-semibold py-3.5 px-8 rounded-full transition-all text-center flex items-center justify-center gap-2 hover:bg-slate-50"
+                            >
+                                <FileText className="w-5 h-5" /> Download Full CV
+                            </a>
                         </div>
                     </div>
 

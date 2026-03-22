@@ -41,7 +41,7 @@ const treatments = [
     },
     {
         title: "View All Services",
-        description: "Explore our full range of podiatric and orthopedic treatments.",
+        description: "Explore our full range of orthopedic treatments.",
         icon: ArrowRight,
         href: "/#treatments",
         isAction: true
@@ -112,7 +112,7 @@ export default function SpecializedTreatments() {
                     <div className="bg-primary p-6 rounded-2xl border border-primary hover:bg-teal-700 transition-all group flex flex-col items-center justify-center text-center">
                         <h3 className="text-xl font-bold text-white mb-2">View All Services</h3>
                         <p className="text-primary-foreground/80 text-sm mb-6">
-                            Explore our full range of podiatric treatments.
+                            Explore our full range of orthopedic treatments.
                         </p>
                         <Link
                             href="/treatments"

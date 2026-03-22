@@ -38,14 +38,14 @@ export default function SmartCTA({ className }: { className?: string }) {
         return (
             <div className={cn("flex items-center gap-3", className)}>
                 <a
-                    href="tel:+919876543210"
+                    href="tel:+917710039780"
                     className="flex items-center gap-2 bg-primary hover:bg-teal-700 text-white font-bold py-2.5 px-5 rounded-full transition-all shadow-md hover:shadow-lg animate-pulse"
                 >
                     <Phone className="w-4 h-4" />
                     <span>Call Now</span>
                 </a>
                 <a
-                    href="https://wa.me/919876543210"
+                    href="https://wa.me/917710039780"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2.5 px-5 rounded-full transition-all shadow-md hover:shadow-lg"
@@ -59,7 +59,7 @@ export default function SmartCTA({ className }: { className?: string }) {
 
     return (
         <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/917710039780"
             target="_blank"
             rel="noopener noreferrer"
             className={cn(

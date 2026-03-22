@@ -44,12 +44,12 @@ export default function LocationSection() {
                                 <div>
                                     <h4 className="font-bold text-slate-900 mb-2 text-lg">Phone & WhatsApp</h4>
                                     <p className="text-slate-600 mb-1">Call us for appointments:</p>
-                                    <a href="tel:+919876543210" className="text-xl font-bold text-slate-900 hover:text-primary transition-colors block mb-1">
-                                        +91 98765 43210
+                                    <a href="tel:+917710039780" className="text-xl font-bold text-slate-900 hover:text-primary transition-colors block mb-1">
+                                        +91 7710039780
                                     </a>
-                                    <p className="text-sm text-slate-500 mb-2">(Available 10:00 AM - 8:00 PM)</p>
+                                    <p className="text-sm text-slate-500 mb-2">(Available 9:00 AM - 9:00 PM)</p>
                                     <a
-                                        href="https://wa.me/919876543210"
+                                        href="https://wa.me/917710039780"
                                         target="_blank"
                                         className="text-[#25D366] font-semibold hover:underline inline-flex items-center gap-1"
                                     >
@@ -65,7 +65,7 @@ export default function LocationSection() {
                                 <div>
                                     <h4 className="font-bold text-slate-900 mb-2 text-lg">Timings</h4>
                                     <p className="text-slate-600 leading-relaxed">
-                                        Monday - Saturday: 10:00 AM - 8:00 PM<br />
+                                        Monday, Wednesday, Friday: 3:00PM-8:00PM<br />
                                         Sunday: Closed
                                     </p>
                                 </div>

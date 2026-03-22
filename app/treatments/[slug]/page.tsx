@@ -76,10 +76,10 @@ export default async function TreatmentPage({ params }: { params: Promise<{ slug
                         </p>
 
                         <div className="space-y-3">
-                            <a href="tel:+919876543210" className="flex items-center justify-center gap-2 bg-slate-900 text-white font-bold py-3.5 rounded-xl hover:bg-slate-800 transition-all shadow-md hover:shadow-lg w-full">
+                            <a href="tel:+917710039780" className="flex items-center justify-center gap-2 bg-slate-900 text-white font-bold py-3.5 rounded-xl hover:bg-slate-800 transition-all shadow-md hover:shadow-lg w-full">
                                 <Phone className="w-4 h-4" /> Call Now
                             </a>
-                            <a href="https://wa.me/919876543210" target="_blank" className="flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold py-3.5 rounded-xl hover:bg-[#128C7E] transition-all shadow-md hover:shadow-lg w-full">
+                            <a href="https://wa.me/917710039780" target="_blank" className="flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold py-3.5 rounded-xl hover:bg-[#128C7E] transition-all shadow-md hover:shadow-lg w-full">
                                 <MessageCircle className="w-5 h-5" /> WhatsApp
                             </a>
                         </div>

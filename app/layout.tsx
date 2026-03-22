@@ -19,7 +19,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "DOC Foot and Ankle | Dr. Samarth Ajay Thakkar",
-  description: "Expert Foot and Ankle Surgeon in Mumbai. Specializing in Podiatric Surgery, Flat Foot Correction, and Sports Injuries.",
+  description: "Expert Foot and Ankle Surgeon in Mumbai. Specializing in Orthopedic Surgery, Flat Foot Correction, and Sports Injuries.",
 };
 
 export default function RootLayout({

@@ -7,13 +7,39 @@ import { useState } from "react";
 export default function AppointmentPortal() {
     const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success">("idle");
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setFormStatus("submitting");
-        // Simulate API call
-        setTimeout(() => {
-            setFormStatus("success");
-        }, 1500);
+
+        const formData = new FormData(e.currentTarget);
+        const data = Object.fromEntries(formData);
+        data.access_key = "1e739287-b452-4656-a837-5e26e54f8996";
+        data.subject = `New Appointment Request from ${data['First Name']} ${data['Last Name']}`;
+        data.from_name = "DOC Foot & Ankle Booking";
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+            const result = await response.json();
+
+            if (result.success) {
+                setFormStatus("success");
+            } else {
+                console.error("Submission failed", result);
+                setFormStatus("idle");
+                alert("Something went wrong. Please try again or contact us directly.");
+            }
+        } catch (error) {
+            console.error("Network error API Web3forms", error);
+            setFormStatus("idle");
+            alert("Network error. Please check your internet and try again.");
+        }
     };
 
     return (
@@ -45,7 +71,7 @@ export default function AppointmentPortal() {
                                     </div>
                                     <div>
                                         <p className="text-xs text-slate-400 uppercase font-bold tracking-wider mb-1">Call Us</p>
-                                        <a href="tel:+919876543210" className="text-xl font-bold hover:text-primary transition-colors">+91 98765 43210</a>
+                                        <a href="tel:+917710039780" className="text-xl font-bold hover:text-primary transition-colors">+91 7710039780</a>
                                     </div>
                                 </div>
 
@@ -55,7 +81,7 @@ export default function AppointmentPortal() {
                                     </div>
                                     <div>
                                         <p className="text-xs text-slate-400 uppercase font-bold tracking-wider mb-1">WhatsApp</p>
-                                        <a href="https://wa.me/919876543210" target="_blank" className="text-xl font-bold hover:text-[#25D366] transition-colors">+91 98765 43210</a>
+                                        <a href="https://wa.me/917710039780" target="_blank" className="text-xl font-bold hover:text-[#25D366] transition-colors">+91 7710039780</a>
                                     </div>
                                 </div>
 
@@ -64,8 +90,8 @@ export default function AppointmentPortal() {
                                         <Clock className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <p className="text-xs text-slate-400 uppercase font-bold tracking-wider mb-1">Timings</p>
-                                        <p className="font-bold">10:00 AM - 8:00 PM</p>
+                                        <p className="text-xs text-slate-400 uppercase font-bold tracking-wider mb-1">Calling Hours</p>
+                                        <p className="font-bold">9:00AM - 9:00PM</p>
                                     </div>
                                 </div>
                             </div>
@@ -95,34 +121,52 @@ export default function AppointmentPortal() {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     <div>
                                         <label className="block text-sm font-bold text-slate-700 mb-2">First Name</label>
-                                        <input required type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
+                                        <input name="First Name" required type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all placeholder:text-slate-400" placeholder="John" />
                                     </div>
                                     <div>
                                         <label className="block text-sm font-bold text-slate-700 mb-2">Last Name</label>
-                                        <input required type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
+                                        <input name="Last Name" required type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all placeholder:text-slate-400" placeholder="Doe" />
                                     </div>
                                 </div>
 
                                 <div>
                                     <label className="block text-sm font-bold text-slate-700 mb-2">Phone Number</label>
-                                    <div className="relative">
-                                        <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">+91</span>
-                                        <input required type="tel" className="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all placeholder:text-slate-400" placeholder="98765 43210" />
-                                    </div>
+                                    <input name="Phone Number" required type="tel" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all placeholder:text-slate-400" placeholder="+91 77100 39780" />
                                 </div>
 
-                                <div>
-                                    <label className="block text-sm font-bold text-slate-700 mb-2">Concern</label>
-                                    <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-slate-700 bg-white appearance-none cursor-pointer">
-                                        <option>Select Treatment</option>
-                                        <option>Flat Foot Surgery</option>
-                                        <option>Heel Pain</option>
-                                        <option>Sports Injury</option>
-                                        <option>Ankle Replacement</option>
-                                        <option>Diabetic Foot</option>
-                                        <option>Other</option>
-                                    </select>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div>
+                                        <label className="block text-sm font-bold text-slate-700 mb-2">Place of Visit</label>
+                                        <select name="Place of Visit" required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-slate-700 bg-white appearance-none cursor-pointer">
+                                            <option value="">Select Place of Visit</option>
+                                            <option>Mumbai - Ghatkopar</option>
+                                            <option>Mumbai - Chembur</option>
+                                            <option>Mumbai - Other</option>
+                                            <option>Thane</option>
+                                            <option>Guwahati</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-bold text-slate-700 mb-2">Concern</label>
+                                        <select name="Concern" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-slate-700 bg-white appearance-none cursor-pointer">
+                                            <option value="">Select Treatment</option>
+                                            <option>Fracture</option>
+                                            <option>Post Operative Follow-Up</option>
+                                            <option>Infection</option>
+                                            <option>Flat Foot</option>
+                                            <option>Diabetic Foot</option>
+                                            <option>Heel Pain</option>
+                                            <option>Sports Injury</option>
+                                            <option>Deformity</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
                                 </div>
+                                <div className="flex items-center gap-3 bg-slate-50 p-4 border border-slate-100 rounded-xl">
+                                    <input type="checkbox" id="emergency" name="Emergency Consultation Needed" value="Yes" className="w-5 h-5 accent-red-500 rounded cursor-pointer" />
+                                    <label htmlFor="emergency" className="text-sm font-bold text-slate-700 cursor-pointer">Emergency Consultation Needed</label>
+                                </div>
+                                <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
                                 <button
                                     disabled={formStatus === "submitting"}

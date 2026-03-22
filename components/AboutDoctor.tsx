@@ -25,7 +25,7 @@ export default function AboutDoctor() {
                             </div>
                             <div>
                                 <p className="text-sm text-slate-500 font-medium uppercase tracking-wide">Experience</p>
-                                <p className="text-2xl font-bold text-slate-900">10+ Years</p>
+                                <p className="text-2xl font-bold text-slate-900">8+ Years</p>
                             </div>
                         </div>
                     </div>
@@ -37,10 +37,10 @@ export default function AboutDoctor() {
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold font-heading text-slate-900 mb-6 leading-tight">
                             Dr. Samarth Ajay Thakkar <br />
-                            <span className="text-slate-500 text-2xl font-medium block mt-2">Consultant Foot and Ankle (Podiatric) Surgeon</span>
+                            <span className="text-slate-500 text-2xl font-medium block mt-2">Consultant Foot and Ankle (Orthopedic) Surgeon</span>
                         </h2>
                         <p className="text-slate-600 mb-6 leading-relaxed text-lg">
-                            Dr. Samarth Ajay Thakkar is a leading authority in foot and ankle surgery, dedicated to restoring mobility and improving the quality of life for his patients. With specialized training and extensive experience, he offers advanced treatments for complex foot deformities, sports injuries, and diabetic foot conditions.
+                            Dr. Samarth Ajay Thakkar is a leading expert in foot and ankle surgery, dedicated to restoring mobility and improving the quality of life for his patients. With specialized training and extensive experience, he offers advanced treatments for complex foot deformities, sports injuries, and diabetic foot conditions.
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
@@ -71,14 +71,6 @@ export default function AboutDoctor() {
                             >
                                 Book Consultation
                             </Link>
-                            <a
-                                href="/media/CV Samarth december 2025.pdf"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-white border-2 border-slate-200 hover:border-primary text-slate-700 hover:text-primary font-semibold py-3.5 px-8 rounded-full transition-all text-center flex items-center justify-center gap-2 hover:bg-slate-50"
-                            >
-                                <FileText className="w-4 h-4" /> Download Full CV
-                            </a>
                         </div>
                     </div>
                 </div>

@@ -20,7 +20,7 @@ export default function HeroSection() {
                         <span className="text-primary">Renewing Lives.</span>
                     </h1>
                     <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-xl leading-relaxed animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">
-                        Expert Foot and Ankle (Podiatric) Surgeon specialized in Minimally Invasive Surgery, Ankle Replacement, and Sports Injuries. Trust your feet to Dr. Samarth Ajay Thakkar.
+                        Expert Foot and Ankle (Orthopedic) Surgeon specialized in Minimally Invasive Surgery, Ankle Replacement, and Sports Injuries. Trust your feet to Dr. Samarth Ajay Thakkar.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-16 duration-700 delay-300">
                         <Link

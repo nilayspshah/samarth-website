@@ -51,7 +51,7 @@ export default function FloatingWhatsApp() {
         // Night mode: Direct WhatsApp link
         return (
             <a
-                href="https://wa.me/919876543210?text=Hi, I would like to book an appointment."
+                href="https://wa.me/917710039780?text=Hi, I would like to book an appointment."
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
@@ -78,7 +78,7 @@ export default function FloatingWhatsApp() {
                             initial={{ opacity: 0, y: 20, scale: 0.8 }}
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 20, scale: 0.8 }}
-                            href="tel:+919876543210"
+                            href="tel:+917710039780"
                             className="bg-primary text-white p-3 rounded-full shadow-lg flex items-center justify-center hover:bg-teal-700"
                             aria-label="Call Now"
                         >
@@ -89,7 +89,7 @@ export default function FloatingWhatsApp() {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 20, scale: 0.8 }}
                             transition={{ delay: 0.05 }}
-                            href="https://wa.me/919876543210?text=Hi, I would like to book an appointment."
+                            href="https://wa.me/917710039780?text=Hi, I would like to book an appointment."
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-[#25D366] p-3 rounded-full shadow-lg flex items-center justify-center hover:bg-[#20bd5a]"

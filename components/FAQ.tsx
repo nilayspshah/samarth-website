@@ -20,7 +20,7 @@ const faqs = [
     },
     {
         question: "How can I book an appointment?",
-        answer: "Booking is easy! You can call us at +91 98765 43210 between 10 AM and 8 PM, or send us a message on WhatsApp anytime. You can also use the appointment request form on this website."
+        answer: "Booking is easy! You can call us at +91 7710039780 between 9 AM and 9 PM, or send us a message on WhatsApp anytime. You can also use the appointment request form on this website."
     },
     {
         question: "What should I bring to my first consultation?",

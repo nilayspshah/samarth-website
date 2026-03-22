@@ -8,7 +8,7 @@ const hospitals = [
     {
         name: "DOC (Dependable Ortho Care)",
         location: "Ghatkopar West",
-        href: "tel:+919876543210",
+        href: "tel:+917710039780",
         logo: "/media/DOC_Logo.png",
         website: "/", // Self link
         isPrimary: true,
@@ -64,6 +64,20 @@ const hospitals = [
         logo: "/media/hospital_logos/Parakh-Hospital-Logo-300x96.png",
         website: "https://parakhhospital.com/"
     },
+    {
+        name: "Ashirwad Hospital",
+        location: "Ambernath",
+        href: "/#contact",
+        logo: "",
+        website: ""
+    },
+    {
+        name: "Adi Arogyam Superspeciality Hospital",
+        location: "Vikhroli East",
+        href: "tel:8850626106",
+        logo: "/media/hospital_logos/adi_arogyam_logo.jpg",
+        website: "https://adiarogyamsuperspecialityhospital.org/"
+    }
 ];
 
 export default function HospitalAffiliations() {
