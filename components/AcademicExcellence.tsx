@@ -199,10 +199,10 @@ export default function AcademicExcellence() {
                     {/* Right Column: Image */}
                     <div className="relative h-full min-h-[400px] lg:min-h-full rounded-3xl overflow-hidden shadow-xl group">
                         <Image
-                            src="/media/surgery_image.jpeg"
-                            alt="Dr. Samarth Ajay Thakkar performing surgery"
+                            src="/media/samarth_ladakh.jpeg"
+                            alt="Dr. Samarth Ajay Thakkar"
                             fill
-                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                             sizes="(max-width: 1024px) 100vw, 50vw"
                         />
 

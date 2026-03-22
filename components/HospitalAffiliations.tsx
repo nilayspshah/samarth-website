@@ -25,58 +25,65 @@ const hospitals = [
     {
         name: "Criticare Asia",
         location: "Kurla West",
-        href: "tel:02268100000",
+        href: "",
         logo: "/media/hospital_logos/criticare_asia.svg",
         website: "https://criticareasiahospital.com/"
     },
     {
         name: "Zen Multi Speciality",
         location: "Chembur",
-        href: "tel:02225260066",
+        href: "tel:+918691010383",
         logo: "/media/hospital_logos/Zen-hospital-logo.png",
         website: "https://zenhospital.in/"
     },
     {
         name: "Sushrut Hospital",
         location: "Chembur",
-        href: "https://sushruthospital.org/book-an-appointment/",
+        href: "",
         logo: "/media/hospital_logos/sushrut_logo.png",
         website: "https://sushruthospital.org/"
     },
     {
         name: "SRV Hospital",
         location: "Chembur",
-        href: "tel:8451800800",
+        href: "",
         logo: "/media/hospital_logos/srv_hospital_logo.png",
         website: "https://srvhospitals.com/"
     },
     {
         name: "Pinnacle Orthocare",
         location: "Thane West",
-        href: "tel:7028859555",
+        href: "tel:+912240763001",
         logo: "/media/hospital_logos/pinnacle_orthocare_logo.jpg",
         website: "https://pinnacleorthocentre.org/"
     },
     {
         name: "Parakh Hospital",
         location: "Ghatkopar East",
-        href: "tel:02267827000",
+        href: "",
         logo: "/media/hospital_logos/Parakh-Hospital-Logo-300x96.png",
         website: "https://parakhhospital.com/"
     },
     {
         name: "Ashirwad Hospital",
         location: "Ambernath",
-        href: "/#contact",
+        href: "",
         logo: "",
         website: ""
     },
     {
         name: "Adi Arogyam Superspeciality Hospital",
         location: "Vikhroli East",
-        href: "tel:8850626106",
+        href: "",
         logo: "/media/hospital_logos/adi_arogyam_logo.jpg",
         website: "https://adiarogyamsuperspecialityhospital.org/"
+    },
+    {
+        name: "Coras Hospital",
+        location: "Guwahati",
+        href: "tel:7896767426",
+        logo: "/media/hospital_logos/coras_hospital_logo.jpeg",
+        website: "https://corashospital.com/"
     }
 ];
 
@@ -134,19 +141,21 @@ export default function HospitalAffiliations() {
                             </div>
 
                             <div className="w-full space-y-2 mt-auto">
-                                <a
-                                    href={hospital.href}
-                                    target={hospital.href.startsWith('http') ? '_blank' : undefined}
-                                    rel={hospital.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                                    className={cn(
-                                        "text-xs font-bold py-2 px-4 rounded-full transition-all w-full flex items-center justify-center gap-2",
-                                        hospital.isPrimary
-                                            ? "bg-primary text-white hover:bg-teal-700 shadow-sm"
-                                            : "text-slate-700 bg-slate-100 hover:bg-slate-200"
-                                    )}
-                                >
-                                    <Calendar className="w-3.5 h-3.5" /> Book Appointment
-                                </a>
+                                {hospital.href && (
+                                    <a
+                                        href={hospital.href}
+                                        target={hospital.href.startsWith('http') ? '_blank' : undefined}
+                                        rel={hospital.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                        className={cn(
+                                            "text-xs font-bold py-2 px-4 rounded-full transition-all w-full flex items-center justify-center gap-2",
+                                            hospital.isPrimary
+                                                ? "bg-primary text-white hover:bg-teal-700 shadow-sm"
+                                                : "text-slate-700 bg-slate-100 hover:bg-slate-200"
+                                        )}
+                                    >
+                                        <Calendar className="w-3.5 h-3.5" /> Book Appointment
+                                    </a>
+                                )}
 
                                 {hospital.website && (
                                     <a
