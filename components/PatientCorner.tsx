@@ -50,36 +50,83 @@ export default function PatientCorner() {
 
                 {/* Gallery Preview */}
                 <div className="text-center mb-12">
-                    <h3 className="text-2xl font-bold font-heading text-slate-900 mb-4">Clinic Gallery</h3>
-                    <p className="text-slate-600">Glimpses of our achievements and patient care.</p>
+                    <h3 className="text-2xl font-bold font-heading text-slate-900 mb-4">Conferences &amp; Achievements</h3>
+                    <p className="text-slate-600">Highlights from academic lectures, medical conferences, and honours in foot &amp; ankle surgery.</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-[400px]">
-                    <div className="relative rounded-2xl overflow-hidden group h-full">
+                <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-4 md:h-[520px]">
+                    {/* Delivering a lecture (tall feature) */}
+                    <div className="relative rounded-2xl overflow-hidden group col-span-2 md:col-span-1 md:row-span-2 h-72 md:h-auto">
                         <Image
-                            src="/media/feliciation.jpeg"
-                            alt="Dr. Samarth Ajay Thakkar Felicitation"
+                            src="/media/conference_photos/BOFAS_IFAS_delivering_lecture_2026.jpeg"
+                            alt="Dr. Samarth Ajay Thakkar delivering a lecture at the BOFAS-IFAS Foot & Ankle Principles Course, June 2026"
                             fill
-                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                            sizes="(max-width: 768px) 100vw, 25vw"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent flex items-end p-6">
-                            <p className="text-white font-medium">Awards & Recognition</p>
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-5">
+                            <p className="text-white font-semibold text-sm md:text-base">Delivering a Lecture</p>
+                            <p className="text-white/80 text-xs md:text-sm">BOFAS-IFAS Foot &amp; Ankle Principles Course, 2026</p>
                         </div>
                     </div>
-                    <div className="grid grid-rows-2 gap-4 h-full">
-                        <div className="relative rounded-2xl overflow-hidden group h-full">
-                            <Image
-                                src="/media/presentation_talk.jpeg"
-                                alt="Conference Presentation"
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent flex items-end p-6">
-                                <p className="text-white font-medium">Medical Conferences</p>
-                            </div>
+
+                    {/* Course group photo (wide) */}
+                    <div className="relative rounded-2xl overflow-hidden group col-span-2 md:col-span-3 h-48 md:h-auto">
+                        <Image
+                            src="/media/conference_photos/BOFAS_IFAS_combined_group_photo_2026.jpeg"
+                            alt="Faculty and delegates at the BOFAS-IFAS Foot & Ankle Principles Course, June 2026"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            sizes="(max-width: 768px) 100vw, 75vw"
+                        />
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-5">
+                            <p className="text-white font-semibold text-sm md:text-base">BOFAS-IFAS Foot &amp; Ankle Course</p>
+                            <p className="text-white/80 text-xs md:text-sm">Faculty &amp; delegates, June 2026</p>
                         </div>
-                        <div className="relative rounded-2xl overflow-hidden group h-full bg-slate-100 flex items-center justify-center">
-                            <p className="text-slate-400 font-medium">More images coming soon...</p>
+                    </div>
+
+                    {/* Conference presentation */}
+                    <div className="relative rounded-2xl overflow-hidden group h-48 md:h-auto">
+                        <Image
+                            src="/media/presentation_talk.jpeg"
+                            alt="Dr. Samarth Ajay Thakkar presenting research at a medical conference"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                        />
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-5">
+                            <p className="text-white font-semibold text-sm md:text-base">Medical Conferences</p>
+                            <p className="text-white/80 text-xs md:text-sm">Presenting research to peers</p>
+                        </div>
+                    </div>
+
+                    {/* Felicitation, Pune */}
+                    <div className="relative rounded-2xl overflow-hidden group h-48 md:h-auto">
+                        <Image
+                            src="/media/conference_photos/BOFAS_IFAS_felicitation_pune_2026.jpeg"
+                            alt="Dr. Samarth Ajay Thakkar being felicitated at a foot and ankle conference in Pune, 2026"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                        />
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-5">
+                            <p className="text-white font-semibold text-sm md:text-base">Felicitation, Pune</p>
+                            <p className="text-white/80 text-xs md:text-sm">Recognised at a foot &amp; ankle conference, 2026</p>
+                        </div>
+                    </div>
+
+                    {/* Awards & Recognition */}
+                    <div className="relative rounded-2xl overflow-hidden group col-span-2 md:col-span-1 h-48 md:h-auto">
+                        <Image
+                            src="/media/feliciation.jpeg"
+                            alt="Dr. Samarth Ajay Thakkar receiving an award for academic excellence"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            sizes="(max-width: 768px) 100vw, 25vw"
+                        />
+                        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-5">
+                            <p className="text-white font-semibold text-sm md:text-base">Awards &amp; Recognition</p>
+                            <p className="text-white/80 text-xs md:text-sm">Honoured for academic excellence</p>
                         </div>
                     </div>
                 </div>

@@ -196,16 +196,26 @@ export default function AcademicExcellence() {
                         </div>
                     </div>
 
-                    {/* Right Column: Image */}
-                    <div className="relative h-full min-h-[400px] lg:min-h-full rounded-3xl overflow-hidden shadow-xl group">
-                        <Image
-                            src="/media/samarth_ladakh.jpeg"
-                            alt="Dr. Samarth Ajay Thakkar"
-                            fill
-                            className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                            sizes="(max-width: 1024px) 100vw, 50vw"
-                        />
-
+                    {/* Right Column: Personal Photos */}
+                    <div className="h-full min-h-[400px] lg:min-h-full flex flex-col gap-4">
+                        <div className="relative flex-1 min-h-[300px] lg:min-h-[240px] rounded-3xl overflow-hidden shadow-xl group">
+                            <Image
+                                src="/media/samarth_ladakh.jpeg"
+                                alt="Dr. Samarth Ajay Thakkar in Ladakh"
+                                fill
+                                className="object-cover object-bottom transition-transform duration-700 group-hover:scale-105"
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                            />
+                        </div>
+                        <div className="relative hidden lg:block flex-1 min-h-[240px] rounded-3xl overflow-hidden shadow-xl group">
+                            <Image
+                                src="/media/individual_photos/samart_individual_snow.jpeg"
+                                alt="Dr. Samarth Ajay Thakkar in the mountains"
+                                fill
+                                className="object-cover object-[30%_center] transition-transform duration-700 group-hover:scale-105"
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
