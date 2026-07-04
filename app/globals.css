@@ -26,6 +26,12 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Offset anchor targets so they clear the sticky navbar (h-20 = 5rem). */
+    scroll-padding-top: 5.5rem;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
